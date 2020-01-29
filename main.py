@@ -31,9 +31,7 @@ class customHTMLParser(HTMLParser):
 
 
 if __name__ == '__main__':
-    from time import time
-
-    start = time()
+    
     for letter in upper_case_letters:
         plt.clf()
         plt.text(0, 0, letter, {'fontsize': 20})
