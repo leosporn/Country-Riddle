@@ -31,7 +31,7 @@ class customHTMLParser(HTMLParser):
 
 
 if __name__ == '__main__':
-    
+
     for letter in upper_case_letters:
         plt.clf()
         plt.text(0, 0, letter, {'fontsize': 20})
@@ -73,7 +73,7 @@ if __name__ == '__main__':
     countries = filter(lambda line: 'country' not in line.lower(), countries)
     countries = filter(lambda line: 'area' not in line.lower(), countries)
     countries = filter(lambda line: 'density' not in line.lower(), countries)
-    countries = filter(lambda line: all(letter in no_holes for letter in line.upper()), countries)
+    countries = filter(lambda line: all(s in no_holes for s in line.upper()), countries)
 
     for country in countries:
         print(country)
